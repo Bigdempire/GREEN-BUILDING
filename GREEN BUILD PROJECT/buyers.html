@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoBuild Buyer Marketplace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">🌿 EcoBuild</a>
+    <nav class="main-nav">
+      <a href="buyers.html">Marketplace</a>
+      <a href="buyer-compare.html">Compare</a>
+      <a href="buyer-calculator.html">Calculator</a>
+      <a href="supplier-products.html">Supplier</a>
+      <a href="admin-dashboard.html">Admin</a>
+      <button style="background:none;color:var(--text);font-weight:700;" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="section-block">
+    <section class="form-card">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+        <div>
+          <h1 class="page-title">Buyer Marketplace</h1>
+          <p class="text-muted">Browse sustainable materials and compare embodied carbon, price, and performance.</p>
+          <p class="text-muted" id="productStatus">Loading materials...</p>
+        </div>
+        <div>
+          <span class="badge" id="compare-badge"></span>
+        </div>
+      </div>
+
+      <section class="form-card" style="margin-top:24px;">
+        <div class="form-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:18px;">
+          <div class="input-group">
+            <label for="searchInput">Search materials</label>
+            <input id="searchInput" type="search" placeholder="Search name, supplier, or type" />
+          </div>
+          <div class="input-group">
+            <label for="typeFilter">Material type</label>
+            <select id="typeFilter">
+              <option value="">All Types</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="sortOrder">Sort by</label>
+            <select id="sortOrder">
+              <option value="name-asc">Name A–Z</option>
+              <option value="price-asc">Price low to high</option>
+              <option value="price-desc">Price high to low</option>
+              <option value="carbon-asc">Carbon low to high</option>
+              <option value="carbon-desc">Carbon high to low</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="priceRange">Max price ($<span id="priceValue">500</span>)</label>
+            <input id="priceRange" type="range" min="0" max="1000" step="10" value="1000" />
+          </div>
+          <div class="input-group">
+            <label for="carbonRange">Max carbon (kg CO₂ <span id="carbonValue">1000</span>)</label>
+            <input id="carbonRange" type="range" min="0" max="1000" step="10" value="1000" />
+          </div>
+        </div>
+        <button type="button" class="secondary" id="clearFilters" style="margin-top:18px;">Clear filters</button>
+      </section>
+
+      <div id="productGrid" class="grid-2" style="gap:24px; margin-top:24px;"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">© 2026 EcoBuild. Discover better materials and reduce carbon footprint.</footer>
+
+  <script src="app.js"></script>
+  <script src="auth.js"></script>
+  <script src="buyers.js"></script>
+</body>
+</html>

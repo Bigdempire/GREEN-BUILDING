@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoBuild Supplier Products</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">🌿 EcoBuild</a>
+    <nav class="main-nav">
+      <a href="buyers.html">Buyer Market</a>
+      <a href="buyer-compare.html">Compare</a>
+      <a href="supplier-products.html">Products</a>
+      <a href="admin-dashboard.html">Admin</a>
+      <button style="background:none;color:var(--text);font-weight:700;" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="section-block">
+    <div class="grid-2" style="gap: 30px;">
+      <section class="form-card">
+        <p class="status-pill">Supplier Control</p>
+        <h1 class="section-title">Manage your materials</h1>
+        <p class="text-muted">Add, update, or remove material listings directly from the EcoBuild catalog.</p>
+
+        <form id="productForm">
+          <input type="hidden" id="productId" />
+          <div class="form-grid">
+            <div class="input-group">
+              <label for="name">Material name</label>
+              <input type="text" id="name" required />
+            </div>
+            <div class="input-group">
+              <label for="supplier">Supplier</label>
+              <input type="text" id="supplier" required />
+            </div>
+            <div class="input-group">
+              <label for="type">Type</label>
+              <input type="text" id="type" list="materialTypes" placeholder="Choose or type a material type" required />
+              <datalist id="materialTypes">
+                <option value="Bamboo"></option>
+                <option value="Reclaimed wood"></option>
+                <option value="Cross-laminated timber"></option>
+                <option value="Rammed earth"></option>
+                <option value="Hempcrete"></option>
+                <option value="Low-carbon concrete"></option>
+                <option value="Recycled steel"></option>
+                <option value="Cork insulation"></option>
+                <option value="Cellulose insulation"></option>
+                <option value="Sheep wool insulation"></option>
+                <option value="Straw bale construction"></option>
+                <option value="Recycled plastic panels"></option>
+                <option value="Solar roof tiles"></option>
+                <option value="Green roof substrate"></option>
+                <option value="Natural stone"></option>
+                <option value="Bio-based plaster"></option>
+                <option value="Ferrock"></option>
+                <option value="Mycelium insulation"></option>
+                <option value="Structural insulated panels"></option>
+              </datalist>
+            </div>
+            <div class="input-group">
+              <label for="price">Price ($)</label>
+              <input type="number" id="price" step="0.01" required />
+            </div>
+            <div class="input-group">
+              <label for="strength">Strength (MPa)</label>
+              <input type="number" id="strength" step="0.1" />
+            </div>
+            <div class="input-group">
+              <label for="durability">Durability (years)</label>
+              <input type="number" id="durability" step="1" />
+            </div>
+            <div class="input-group">
+              <label for="carbon">Embodied carbon (kg CO₂)</label>
+              <input type="number" id="carbon" step="0.1" required />
+            </div>
+            <div class="input-group">
+              <label for="unit">Unit</label>
+              <input type="text" id="unit" value="ton" required />
+            </div>
+            <div class="input-group">
+              <label for="contact_info">Contact info</label>
+              <input type="text" id="contact_info" placeholder="Phone or email" />
+            </div>
+            <div class="input-group">
+              <label for="image_file">Upload image</label>
+              <input type="file" id="image_file" accept="image/*" />
+            </div>
+            <div class="input-group" id="imagePreviewGroup" style="display:none;">
+              <label>Preview</label>
+              <img id="imagePreview" alt="Image preview" style="width:100%;border-radius:16px;max-height:220px;object-fit:cover;" />
+            </div>
+            <div class="input-group">
+              <label for="image_url">Image URL</label>
+              <input type="text" id="image_url" placeholder="https://..." />
+            </div>
+          </div>
+          <button type="submit">Save Product</button>
+        </form>
+      </section>
+
+      <section class="form-card">
+        <p class="status-pill">Current Listings</p>
+        <h2 class="section-title">My product catalog</h2>
+        <div id="productList"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">© 2026 EcoBuild. Supplier product management made simple.</footer>
+
+  <script src="app.js"></script>
+  <script src="auth.js"></script>
+  <script src="supplier-products.js"></script>
+</body>
+</html>

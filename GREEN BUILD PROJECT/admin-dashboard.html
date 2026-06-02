@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoBuild Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">🌿 EcoBuild</a>
+    <nav class="main-nav">
+      <a href="buyers.html">Marketplace</a>
+      <a href="buyer-compare.html">Compare</a>
+      <a href="supplier-products.html">Suppliers</a>
+      <button style="background:none;color:var(--text);font-weight:700;" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="section-block">
+    <section class="form-card">
+      <p class="status-pill">Admin Overview</p>
+      <h1 class="page-title">Platform metrics & approvals</h1>
+      <p class="text-muted">Monitor product listings, supplier growth, and embodied carbon trends.</p>
+
+      <div class="stats-grid" style="margin-top:24px;">
+        <div class="card">
+          <h2>Total products</h2>
+          <p id="totalProducts">—</p>
+        </div>
+        <div class="card">
+          <h2>Total suppliers</h2>
+          <p id="totalSuppliers">—</p>
+        </div>
+        <div class="card">
+          <h2>Average carbon</h2>
+          <p id="avgCarbon">— kg CO₂</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:28px;">
+        <h2 class="section-title">Approval workflow</h2>
+        <p class="text-muted">Pending products will appear here once supplier submissions are connected to the backend.</p>
+        <div id="pendingList"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">© 2026 EcoBuild. Administrative controls for sustainable supply chains.</footer>
+
+  <script src="app.js"></script>
+  <script src="auth.js"></script>
+  <script src="admin-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoBuild - Material Catalog</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9fff9;
+      color: #333;
+    }
+
+    /* Navigation Bar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to bottom, #f9fff9, #e6f5e6);
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* Search & Filters */
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .filters input, .filters select {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    /* Catalog Grid */
+    .catalog {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .material-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .material-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .material-card .content {
+      padding: 15px;
+    }
+
+    .material-card h3 {
+      margin: 0 0 10px;
+      color: #2e7d32;
+    }
+
+    .material-card p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Comparison Section */
+    .comparison {
+      padding: 40px;
+      background: #f1f1f1;
+    }
+
+    .comparison h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2e7d32;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+    }
+
+    .comparison-table th, .comparison-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .comparison-table th {
+      background: #e6f5e6;
+      color: #2e7d32;
+    }
+
+    /* CO₂ Calculator */
+    .calculator {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .calculator h2 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+
+    .calculator input {
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .calculator button {
+      padding: 12px 24px;
+      background: #2e7d32;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .calculator button:hover {
+      background: #256628;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f1f1f1;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">🌿 EcoBuild</div>
+    <nav>
+      <a href="#">Catalog</a>
+      <a href="#">Compare</a>
+      <a href="#">CO₂ Calculator</a>
+      <span style="margin-left:20px; font-weight:600;">bigdempire59</span>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Material Catalog</h1>
+    <p>Discover sustainable building materials from verified suppliers.</p>
+  </section>
+
+  <!-- Filters -->
+  <section class="filters">
+    <input type="text" placeholder="Search materials…">
+    <select>
+      <option>All Types</option>
+      <option>Cement</option>
+      <option>Aggregates</option>
+      <option>Fibres</option>
+    </select>
+    <input type="range" min="0" max="1000" value="500"> Max Price: $1000/ton
+    <input type="range" min="0" max="500" value="250"> Max Embodied Carbon: 500 kg CO₂
+  </section>
+
+  <!-- Catalog Grid -->
+  <section class="catalog">
+    <!-- Example product cards -->
+    <div class="material-card">
+      <img src="product1.jpg" alt="Green Cement Mix">
+      <div class="content">
+        <h3>Green Cement Mix</h3>
+        <p>EcoMaterials Ltd</p>
+        <p>Low-carbon cement blend with 40% reduced CO₂ emissions</p>
+        <p><strong>Price:</strong> $45/ton</p>
+        <p><strong>Strength:</strong> 42.5 MPa</p>
+        <p><strong>Durability:</strong> 50 years</p>
+        <p><strong>Embodied Carbon:</strong> 320 kg CO₂</p>
+      </div>
+    </div>
+
+    <div class="material-card">
+      <img src="product2.jpg" alt="Geopolymer Concrete">
+      <div class="content">
+        <h3>Geopolymer Concrete</h3>
+        <p>FutureBuild Co</p>
+        <p>Fly ash-based alternative to traditional concrete</p>
+        <p><strong>Price:</strong> $52/ton</p>
+        <p><strong>Strength:</strong> 45 MPa</p>
+        <p><strong>Durability:</strong> 60 years</p>
+        <p><strong>Embodied Carbon:</strong> 180 kg CO₂</p>
+      </div>
+    </div>
+
+    <div class="material-card">
+      <img src="product3.jpg" alt="Recycled Aggregate">
+      <div class="content">
+        <h3>Recycled Aggregate</h3>
+        <p>EcoMaterials Ltd</p>
+        <p>100% recycled construction waste aggregate</p>
+        <p><strong>Price:</strong> $18/ton</p>
+        <p><strong>Strength:</strong> 30 MPa</p>
+        <p><strong>Durability:</strong> 40 years</p>
+        <p><strong>Embodied Carbon:</strong> 25 kg CO₂</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section class="comparison">
+    <h2>Compare Materials</h2>
+    <table class="comparison-table">
+      <tr>
+        <th>Material</th>
+        <th>Price</th>
+        <th>Strength</th>
+        <th>Durability</th>
+        <th>Embodied Carbon</th>
+      </tr>
+      <tr>
+        <td>Green Cement Mix</td>
+        <td>$45/ton</td>
+        <td>42.5 MPa</td>
+        <td>50 years</td>
+        <td>320 kg CO₂</td>
+      </tr>
+      <tr>
+        <td>Geopolymer Concrete</td>
+        <td>$52/ton</td>
+        <td>45 MPa</td>
+        <td>60 years</td>
+        <td>180 kg CO₂</td

@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "name": "Green Cement Mix",
+    "supplier": "EcoMaterials Ltd",
+    "type": "Cement",
+    "price": 45,
+    "strength": 42.5,
+    "durability": 50,
+    "carbon": 320,
+    "unit": "ton",
+    "image_url": "uploads/green_cement.jpg",
+    "specifications": {
+      "recyclable": true,
+      "fireRating": "A1",
+      "waterResistance": "High"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Hemp-Lime Composite",
+    "supplier": "RenewBuild Co",
+    "type": "Insulation",
+    "price": 85,
+    "strength": 18,
+    "durability": 40,
+    "carbon": 45,
+    "unit": "m3",
+    "image_url": "uploads/hemp_lime.jpg",
+    "specifications": {
+      "recyclable": true,
+      "fireRating": "A2",
+      "waterResistance": "Medium"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Recycled Steel Rebar",
+    "supplier": "GreenStruct Ltd",
+    "type": "Rebar",
+    "price": 120,
+    "strength": 550,
+    "durability": 100,
+    "carbon": 210,
+    "unit": "ton",
+    "image_url": "uploads/recycled_steel.jpg",
+    "specifications": {
+      "recyclable": true,
+      "fireRating": "A1",
+      "waterResistance": "High"
+    }
+  }
+]

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoBuild Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">🌿 EcoBuild</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="signup.html">Sign Up</a>
+    </nav>
+  </header>
+
+  <main class="section-block">
+    <section class="form-card" style="max-width: 520px; margin: 0 auto;">
+      <p class="status-pill">Secure Login</p>
+      <h1 class="page-title">Welcome Back</h1>
+      <p class="text-muted">Use your EcoBuild credentials to access buyer, supplier, or admin tools.</p>
+
+      <form id="authForm" data-type="login">
+        <div class="input-group">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="••••••••" required />
+        </div>
+
+        <div class="input-group">
+          <label>Login as</label>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <label><input type="radio" name="role" value="buyer" checked /> Buyer</label>
+            <label><input type="radio" name="role" value="supplier" /> Supplier</label>
+            <label><input type="radio" name="role" value="admin" /> Admin</label>
+          </div>
+        </div>
+
+        <button type="submit">Sign in</button>
+      </form>
+
+      <p class="text-muted" style="margin-top: 18px; text-align: center;">Don't have an account? <a href="signup.html">Create one</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">© 2026 EcoBuild. Building more sustainable projects together.</footer>
+
+  <script src="app.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>

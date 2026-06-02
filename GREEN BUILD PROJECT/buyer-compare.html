@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoBuild Material Comparison</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">🌿 EcoBuild</a>
+    <nav class="main-nav">
+      <a href="buyers.html">Marketplace</a>
+      <a href="buyer-calculator.html">Calculator</a>
+      <a href="supplier-products.html">Supplier</a>
+      <a href="admin-dashboard.html">Admin</a>
+    </nav>
+  </header>
+
+  <main class="section-block">
+    <section class="form-card">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+        <div>
+          <h1 class="page-title">Compare Materials</h1>
+          <p class="text-muted">Build side-by-side insights for carbon, strength, durability, and price.</p>
+        </div>
+        <select id="viewMode" style="max-width:240px;">
+          <option value="table">Table View</option>
+          <option value="chart">Bar Chart</option>
+          <option value="radar">Radar Chart</option>
+        </select>
+      </div>
+
+      <div class="card" style="margin-top:24px;">
+        <h2 class="section-title">Add products to compare</h2>
+        <div id="materialButtons" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:14px;"></div>
+      </div>
+
+      <div id="contentArea" style="margin-top:28px;"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">© 2026 EcoBuild. Compare smarter and choose greener materials.</footer>
+
+  <script src="app.js"></script>
+  <script src="auth.js"></script>
+  <script src="buyer-compare.js"></script>
+</body>
+</html>

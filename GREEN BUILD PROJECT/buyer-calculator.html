@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoBuild CO₂ Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">🌿 EcoBuild</a>
+    <nav class="main-nav">
+      <a href="buyers.html">Market</a>
+      <a href="buyer-compare.html">Compare</a>
+      <a href="supplier-products.html">Suppliers</a>
+      <a href="admin-dashboard.html">Admin</a>
+    </nav>
+  </header>
+
+  <main class="section-block">
+    <section class="form-card" style="max-width: 760px; margin: 0 auto;">
+      <p class="status-pill">CO₂ Savings</p>
+      <h1 class="page-title">Calculate your emissions reduction</h1>
+      <p class="text-muted">Compare conventional materials with greener alternatives and discover the carbon savings for your project.</p>
+
+      <div class="form-grid">
+        <div class="input-group">
+          <label for="conventional">Conventional material</label>
+          <select id="conventional">
+            <option value="">Select conventional material</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="alternative">Sustainable alternative</label>
+          <select id="alternative">
+            <option value="">Select sustainable alternative</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="quantity">Quantity (tons)</label>
+          <input type="number" id="quantity" value="100" min="1" />
+        </div>
+      </div>
+
+      <button type="button" class="primary" onclick="calculateSavings()">Calculate savings</button>
+
+      <div id="results" style="margin-top: 30px;"></div>
+
+      <div class="grid-2" style="margin-top: 30px; gap: 20px;">
+        <div class="card">
+          <h2>What is embodied carbon?</h2>
+          <p>Embodied carbon measures total emissions over the lifecycle of a material, including extraction, manufacturing, transport, and installation.</p>
+        </div>
+        <div class="card">
+          <h2>Why choose low-carbon materials?</h2>
+          <p>Low-carbon alternatives reduce operational emissions and improve material resiliency — helping projects qualify for green certifications.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">© 2026 EcoBuild. Sustainable material intelligence for every project.</footer>
+
+  <script src="app.js"></script>
+  <script src="auth.js"></script>
+  <script src="buyer-calculator.js"></script>
+</body>
+</html>
